@@ -17,14 +17,14 @@ function getRandomRockPaperScissorsValue() {
 //Define the winner
 function getRockPaperScissorsWinner(playerValue, computerValue) {
   if (playerValue === computerValue) {
-    return "tie";
+    return "It's a tie!";
   } else if (
     playerValue - 1 === computerValue ||
     (playerValue === ROCK_VALUE && computerValue === SCISSORS_VALUE)
   ) {
-    return "player";
+    return "Congrats! You Win!";
   } else {
-    return "computer";
+    return "Computer Win!";
   }
 }
 
@@ -32,10 +32,13 @@ document.getElementById("form").onchange = function () {
   const playerChoice = document.querySelector(
     "input[type=radio]:checked"
   ).value;
-  const playerValue = choicesMap.values
-    .toLowerCase()
-    .get(playerChoice)
-    .toLowerCase();
+  // Convert the map to an array of key-value pairs.
+  const keyValuePairs = Array.from(choicesMap);
+
+  // Find the first element in the array that matches the player's choice.
+  const keyValuePair = keyValuePairs.find((pair) => pair[1] === playerChoice);
+
+  const playerValue = keyValuePair[0];
 
   const computerValue = getRandomRockPaperScissorsValue();
   const computerChoice = choicesMap.get(computerValue);
@@ -44,7 +47,7 @@ document.getElementById("form").onchange = function () {
 
   const message = document.getElementById("result");
   message.innerHTML = `
-    ${winner[0].toUpperCase() + winner.slice(1)} Won!!<br/>
+    ${winner} <br/>
     Computer Choice: ${computerChoice}<br/>
     Your Choice: ${playerChoice[0].toUpperCase() + playerChoice.slice(1)}
   `;
