@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper, Rock and Seccisor</title>
+  </head>
+  <body>
+    <form id="form">
+      <h3>Pick your choice:</h3>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="container">
+        <label for="rock">
+          <input type="radio" name="choice" id="rock" value="rock" />
+          <div class="card-header py-3">Rock</div>
+        </label>
+        <label for="paper">
+          <input type="radio" name="choice" id="paper" value="paper" />
+          <div class="card-header py-3">Paper</div>
+        </label>
+        <label for="seccisor">
+          <input type="radio" name="choice" id="seccisor" value="scissors" />
+          <div class="card-header py-3">Scissor</div>
+        </label>
+      </div>
+    </form>
+    <!-- <div><button class="btn btn-primary" id="btn">Show Result</button></div> -->
+    <h4 id="congrats">
+      <p id="result"></p>
+    </h4>
+    <script src="main.js"></script>
+  </body>
+</html>

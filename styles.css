@@ -1,0 +1,34 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+body {
+    padding: 10%;
+}
+
+h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+div:hover {
+    background-color: rgb(163, 230, 170);
+}
+
+input[type=radio]:checked+div {
+    /* (RADIO CHECKED) DIV STYLES */
+    background-color: #afeaaa;
+}
+
+/* .row-cols-1>button {
+    background-color: rgb(171, 181, 178);
+    border-color: rgb(169, 178, 175);
+    display: block;
+    width: 250px;
+    margin: auto;
+} */
+div>button.btn{
+   display: block;
+   width: 100%;
+}
